@@ -1,0 +1,7 @@
+.grid-container {
+    display: grid;
+    grid-template-rows: repeat(auto-fit, auto); /* Adjust as needed */
+    width: 100%; /* Ensure container takes full width */
+    max-width: 100%; /* Prevent overflow beyond the viewport width */
+    overflow-x: hidden; /* Hide horizontal overflow */
+  }

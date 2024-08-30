@@ -1,0 +1,35 @@
+#content{
+    display: grid;
+    grid-template-rows: auto auto;
+}
+
+#content h1{
+    display: flex;
+    justify-content: center;
+    color: #5C3A21; /* Deep Brown color for text */
+    margin-top: 40px; /* Remove default margin */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Soft text shadow for depth */
+    text-align: center; /* Center text horizontally */
+    font-family: 'Arial', sans-serif; /* Modern font */
+}
+
+#favourites{
+    display:grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3,auto);
+    column-gap: 20px;
+    height: 400px;
+}
+
+#orders{
+    background-color: #F5E8C7; /* Black background */
+    color: #5C3A21; /* Classic terminal green text */
+    padding: 20px; /* Padding inside the terminal */
+    border: 1px solid #333; /* Optional: Border to define the terminal edge */
+    border-radius: 5px; /* Optional: Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Glow effect for terminal look */
+    width: 70%; /* Use percentage width to fit container */
+    max-width: 500px; /* Max width to prevent overflow */
+    height: auto; /* Fixed height */
+    margin: 20px auto; /* Center the terminal horizontally */
+}

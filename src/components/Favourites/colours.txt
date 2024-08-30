@@ -1,0 +1,22 @@
+Suggested Color Palette
+Warm Red - Represents heat, spice, and appetite.
+
+Hex: #E94F37
+RGB: rgb(233, 79, 55)
+Creamy Beige - Evokes a sense of freshness and complements the warm red.
+
+Hex: #F5E8C7
+RGB: rgb(245, 232, 199)
+Olive Green - Adds a natural, fresh touch and works well with food themes.
+
+Hex: #6A7F40
+RGB: rgb(106, 127, 64)
+Deep Brown - Complements the warm tones and provides a solid, earthy base.
+
+Hex: #5C3A21
+RGB: rgb(92, 58, 33)
+Color Usage
+Warm Red: Use for accents, call-to-action buttons, and important highlights.
+Creamy Beige: Ideal for backgrounds, creating a clean and inviting look.
+Olive Green: Great for secondary elements, headers, or subtle accents.
+Deep Brown: Suitable for text, footers, and any elements needing a solid base.

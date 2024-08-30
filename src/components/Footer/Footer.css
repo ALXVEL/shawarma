@@ -1,0 +1,23 @@
+#footer-content {
+    display: flex; /* Use Flexbox to center content */
+    flex-direction: column;
+    align-items: center; /* Center vertically */
+    width: 100%;
+    justify-content: center; /* Center horizontally */
+    background-color: #f7f3ea; /* Creamy Beige background */
+    padding: 20px; /* Add padding around the content */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Subtle shadow effect */
+  }
+
+#footer-content h5, #footer-content h1 {
+    color: #5C3A21; /* Deep Brown color for text */
+    margin: 0; /* Remove default margin */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Soft text shadow for depth */
+    text-align: center; /* Center text horizontally */
+    font-family: 'Arial', sans-serif; /* Modern font */
+}
+
+#footer-content p {
+    margin: 0;
+}
+  
