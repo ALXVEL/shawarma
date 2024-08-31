@@ -2,10 +2,9 @@
   position: relative;
   display: flex;
   flex-direction: column; /* Stack items vertically */
-  height: 400px;
+  height: 600px;
   width: 100%;
   background-color: #F5E8C7;
-  padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   align-items: center; /* Center vertically */
@@ -28,7 +27,6 @@
 }
 
 #toppings-container, #sauces-container {
-  margin-top: 40px;
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
@@ -54,6 +52,7 @@
 .topping, .sauce{
   display: flex;
   width: 100px;
+  flex-wrap: wrap;
   justify-content: center;
   cursor: pointer;
   border: 2px solid black;
@@ -65,13 +64,6 @@
 .topping.selected, .sauce.selected{
   border-color: #7A4D39; /* Border color when selected */
   transform: scale(1.05); /* Slightly increase size when selected */
-}
-
-#topping-image {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-bottom: 2px solid #5C3A21;
 }
 
 #topping-name {
@@ -98,4 +90,12 @@ button {
 
 button:hover {
   background-color: #7A4D39; /* Lighter Brown for hover effect */
+}
+
+.button-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border-radius: 50%;
 }

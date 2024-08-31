@@ -1,6 +1,24 @@
 import React, { useState } from 'react';
 import './IngredientsList.css';
 
+import chickenImage from './images/chicken.jpg';
+import beefImage from './images/beef.jpeg';
+import veggieImage from './images/veggie.jpeg';
+
+import coleslawImage from './images/coleslaw.jpeg';
+import cucumberImage from './images/cucumber.jpeg';
+import hummusImage from './images/hummus.jpeg';
+import lettuceImage from './images/lettuce.jpeg';
+import onionsImage from './images/onions.jpeg';
+import purpleCabbageImage from './images/purple_cabbage.jpeg';
+import tomatoImage from './images/tomato.jpeg';
+
+import bbqSauceImage from './images/bbq_sauce.jpg';
+import chipotleSauceImage from './images/chipotle_sauce.jpeg';
+import dijonSauceImage from './images/dijon.jpeg';
+import garlicSauceImage from './images/garlic_sauce.jpeg';
+import tahiniSauceImage from './images/tahini sauce.jpg';
+
 function IngredientList ({ shawarmaOrder, setShawarmaOrder, setFavourite}){
     
     const [selectedTopping, setSelectedTopping] = useState([]);
@@ -11,21 +29,21 @@ function IngredientList ({ shawarmaOrder, setShawarmaOrder, setFavourite}){
     const [spicinessColor, setSpicinessColor] = useState("yellow"); // Default color
     
     const toppings = [
-        { name: 'Lettuce'},
-        { name: 'Tomatoes'},
-        { name: 'Coleslaw'},
-        { name: 'Onions & Herbs'},
-        { name: 'Purple Cabbage'},
-        { name: 'Cucumbers'},
-        { name: 'Hummus'}
+        { name: 'Lettuce', img: lettuceImage},
+        { name: 'Tomatoes', img: tomatoImage},
+        { name: 'Coleslaw', img: coleslawImage},
+        { name: 'Onions & Herbs', img: onionsImage},
+        { name: 'Purple Cabbage', img: purpleCabbageImage},
+        { name: 'Cucumbers', img: cucumberImage},
+        { name: 'Hummus', img: hummusImage}
     ];
 
     const sauces = [
-        { name: 'BBQ' },
-        { name: 'Chipotle' },
-        { name: 'Garlic' },
-        { name: 'Tahini' },
-        { name: 'Dijon' }
+        { name: 'BBQ', img: bbqSauceImage },
+        { name: 'Chipotle', img: chipotleSauceImage },
+        { name: 'Garlic', img: garlicSauceImage },
+        { name: 'Tahini', img: tahiniSauceImage },
+        { name: 'Dijon', img: dijonSauceImage }
     ]
 
     const handleToppingClick = (topping) => {
@@ -154,10 +172,25 @@ function IngredientList ({ shawarmaOrder, setShawarmaOrder, setFavourite}){
             {currentSelection === 'main' && (
                 <>
                     <h1>Choose your main:</h1>
-                    <div id="button-container">
-                        <button onClick={() => ingredientButtonClick("Chicken")} id="chicken">Chicken</button>
-                        <button onClick={() => ingredientButtonClick("Beef")} id="beef">Beef</button>
-                        <button onClick={() => ingredientButtonClick("Veggie")} id="vegetarian">Veggie</button>
+                    <div id="button-container">                    
+                        <button onClick={() => ingredientButtonClick("Chicken")} id="chicken">
+                            <div id="ingredient-image">
+                                <img src= {chickenImage} alt="Chicken" className="button-image" />
+                            </div>
+                            <span>Chicken</span>
+                        </button>
+                        <button onClick={() => ingredientButtonClick("Beef")} id="beef">
+                            <div id="ingredient-image">
+                                <img src= {beefImage} alt="Beef" className="button-image" />
+                            </div>
+                            <span>Beef</span>    
+                        </button>
+                        <button onClick={() => ingredientButtonClick("Veggie")} id="vegetarian">
+                            <div id="ingredient-image">
+                                <img src= {veggieImage} alt="Veggie" className="button-image" />
+                            </div>
+                            <span>Veggie</span>
+                        </button>
                     </div>
                 </>
             )}
@@ -177,6 +210,10 @@ function IngredientList ({ shawarmaOrder, setShawarmaOrder, setFavourite}){
                                         onClick={() => handleToppingClick(topping.name)}
                                         className={`topping ${selectedTopping.includes(topping.name) ? 'selected' : ''}`}
                                     >
+                                        <div id="ingredient-image">
+                                            <img src={topping.img} alt={topping.name} className="button-image"></img>
+                                        </div>
+                                        
                                         <span className="topping-name">{topping.name}</span>
                                     </div>
                                 ))
@@ -199,6 +236,9 @@ function IngredientList ({ shawarmaOrder, setShawarmaOrder, setFavourite}){
                                     onClick= { () => handleSauceClick(sauce.name)}
                                     className= {`sauce ${selectedSauce.includes(sauce.name) ? 'selected' : ''}`}
                                 >
+                                    <div id="ingredient-image">
+                                            <img src={sauce.img} alt={sauce.name} className="button-image"></img>
+                                    </div>                                    
                                     <span className="sauce-name">{sauce.name}</span>
                                 </div>
                             ))
